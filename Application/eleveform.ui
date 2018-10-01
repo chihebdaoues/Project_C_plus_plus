@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EleveForm</class>
+ <widget class="QWidget" name="EleveForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>509</width>
+    <height>461</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="6">
+    <widget class="QPushButton" name="pbAjoutMod">
+     <property name="text">
+      <string>Ajouter</string>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4" rowspan="3" colspan="3">
+    <widget class="QWidget" name="widget" native="true"/>
+   </item>
+   <item row="1" column="0" rowspan="3" colspan="2">
+    <widget class="QListWidget" name="lwEleves"/>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLineEdit" name="leSearch">
+     <property name="inputMethodHints">
+      <set>Qt::ImhNone</set>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Rechercher</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="4">
+    <widget class="QPushButton" name="pbReturnClear">
+     <property name="text">
+      <string>Retour</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="pbSearch">
+     <property name="text">
+      <string>Chercher</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3" rowspan="4">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="5">
+    <widget class="QPushButton" name="pbClearSupp">
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>leSearch</tabstop>
+  <tabstop>lwEleves</tabstop>
+  <tabstop>pbReturnClear</tabstop>
+  <tabstop>pbClearSupp</tabstop>
+  <tabstop>pbAjoutMod</tabstop>
+  <tabstop>pbSearch</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>leSearch</sender>
+   <signal>returnPressed()</signal>
+   <receiver>pbSearch</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>160</x>
+     <y>30</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

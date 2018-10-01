@@ -1,0 +1,18 @@
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    startWid = new StartForm();
+    ui->setupUi(this);
+    setCentralWidget(startWid);
+    layout()->setSizeConstraint(QLayout::SetFixedSize);
+    statusBar()->showMessage("Welcome, "+QDateTime::currentDateTime().toString());
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
